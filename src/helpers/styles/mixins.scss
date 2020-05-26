@@ -1,0 +1,81 @@
+@import "variables";
+
+@font-face {
+  font-family: "Mont Regular";
+  src: url(../../fonts//Mont-Regular.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mont SemiBold";
+  src: url(../../fonts/Mont-SemiBold.otf);
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mont Bold";
+  src: url(../../fonts/Mont-Bold.otf);
+  font-weight: bold;
+  font-style: normal;
+}
+
+@mixin small-text-12px {
+  font-family: "Mont SemiBold", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0;
+}
+
+@mixin body-text {
+  font-family: "Mont Regular", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0;
+}
+
+@mixin buttons-text {
+  font-family: "Mont SemiBold", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0;
+}
+
+@mixin uppercase-text {
+  font-family: "Mont Bold", sans-serif;
+  font-size: 14px;
+  line-height: 11px;
+  letter-spacing: 0.04em;
+}
+
+@mixin  h3-text {
+  font-family: "Mont SemiBold", sans-serif;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 0;
+}
+
+@mixin  h2-text {
+  font-family: "Mont Bold", sans-serif;
+  font-size: 22px;
+  line-height: 31px;
+  letter-spacing: 0;
+}
+
+@mixin  h1-text {
+  font-family: "Mont Bold", sans-serif;
+  font-size: 32px;
+  line-height: 41px;
+  letter-spacing: -0.01em;
+}
+
+@mixin header-footer-active {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  background-color: $color-primary-gray;
+  height: 3px;
+  transition: width 0.3s;
+}

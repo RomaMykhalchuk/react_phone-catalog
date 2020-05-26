@@ -1,0 +1,65 @@
+@import "../../helpers/styles/variables.scss";
+@import "../../helpers/styles/mixins.scss";
+
+.header {
+  position: sticky;
+  height: $header-height;
+  box-shadow: 0 1px 0 #e2e6e9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__left-side {
+    display: flex;
+    align-items: center;
+  }
+  &__right-side {
+    display: flex;
+  }
+  &__logo {
+    margin: 0 64px 0 25px;
+  }
+  &__icon-wrapper {
+    width: 64px;
+    height: 64px;
+    box-shadow: -1px 0 0 #e2e6e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:first-child {
+      border-right: none;
+    }
+  }
+}
+
+.nav {
+  &__item {
+    margin-right: 64px;
+  }
+  &__link {
+    line-height: $header-height;
+    color: $color-secondary-gray;
+    @include small-text-12px;
+    text-transform: uppercase;
+    display: block;
+
+    position: relative;
+    &::after {
+      @include header-footer-active;
+      width: 0;
+    }
+    &:hover::after {
+      @include header-footer-active;
+      width: 100%;
+    }
+    &--is-active {
+      color: $color-primary-gray;
+    }
+    &--is-active::after {
+      @include header-footer-active;
+      width: 100%;
+    }
+  }
+  &__list {
+    display: flex;
+  }
+}
